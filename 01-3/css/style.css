@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* reset */
+body{background: #ffffff; color:#333333; font-family: "함초롱바탕체";}
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{display: block; text-decoration: none; color: inherit;}
+img{border: 0; display: block;}
+.cf:after{content: ""; display: block; clear: both;}
+
+/* 기본크기 */
+#wrap{width: 1200px; height: 700px; margin: 0 auto;}
+header{width: 1200px; height: 100px;}
+#slide{width: 1200px; height: 300px; }
+#content{width: 1200px; height: 200px;}
+footer{width: 1200px; height: 100px; background: rgb(128, 37, 37);}
+
+/* header */
+.logo{width: 200px; height: 40px; padding: 30px 0; float: left;}
+nav{width: 1000px; height: 100px; float: left;}
+.gnb{width: 600px; height: 40px; position: relative; top:30px; left: 380px;}
+.gnb li{float: left; width: 25%;}
+.gnb a{text-align: center; line-height: 40px; background: rgb(128, 37, 37); color: #fff; font-size: 17px;}
+.sub li{width: 100%;}
+.sub a{line-height: 32px; background: #999; font-size: 14px;}
+.gnb li:hover>a{background: #fff; color: #333333;}
+.sub{display: none;}
+
+/* slide */
+#slide{overflow: hidden;}
+#slide ul{animation: slide 9s infinite;}
+@keyframes slide{
+    0%{margin-top: 0;}
+    33%{margin-top: -300px;}
+    66%{margin-top: -600px;}
+    100%{margin-top: -900px;}
+}
+
+/* content */
+#content section{width: 400px; height: 200px; padding: 10px; box-sizing: border-box; float: left;}
+.tab li{float: left; }
+.tab a{ line-height: 27px; width: 190px; text-align: center; border-bottom: 3px rgb(128, 37, 37) solid;
+}
+.tab>li>a.on{border-bottom: 3px #999 solid; color: rgb(128, 37, 37);}
+.notice a{height: 25px; line-height: 25px;}
+.subject{width: 280px;
+float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.date{float:left; width: 100px; text-align: right;}
+.gallery img{width: 100px; height: 100px;}
+.gallery li{float: left; padding: 25px 0 25px 20px;}
+.gallery{display: none;}
+.gallery li:hover{opacity: .6;}
+#content section h5{display: none;}
+#content section:nth-child(2){padding: 0;}
+.shortcut img{width: 100px; height: 100px;}
+.shortcut li{float: left; padding: 9px 0 10px 20px;}
+.shortcut p{text-align: center; background: #ccc; border-radius: 5px;  margin: 5px 0;}
+#content section h4{line-height: 27px; width: 380px; text-align: center; border-bottom: 3px rgb(128, 37, 37) solid;
+font-size: 17px;}
+.shortcut a:hover{text-decoration: underline;}
+.notice li:hover{background: #ccc;}
+
+/* footer */
+.copyright{width: 800px; height: 100px; color:#fff; float: left; font-size: 15px; line-height: 50px; text-align: center;}
+.sns{width: 200px; height: 100px; text-align: center; float: left; line-height: 100px;}
+
+/* popup */
+#popup{width: 100%;
+height: 100vh;
+position: fixed;
+top:0;
+left: 0;
+background: rgba(40,40,40,.7);
+display: none;
+}
+.popup_body{
+    background: #ffff;
+    width:400px;
+    height: 500px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 50px;
+}
+.popup_body h4{width: 400px; border-top: 3px #333 solid; border-bottom: 3px #333 solid; 
+padding: 10px 0; font-size: 1.2rem;
+}
+.popup_body p{text-align: left; padding: 40px 0;}
+.close{width: 80px; height: 30px; border:0; background: #333; color:#fff;}
